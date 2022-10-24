@@ -1,18 +1,34 @@
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 public class AlfredQuotes {
+    Date myDate = new Date();
+    SimpleDateFormat myFormat = new SimpleDateFormat("HH");
+    String timeOnlyFormatStr = myFormat.format(myDate);
+    int timeOnlyFormatInt = Integer.parseInt(timeOnlyFormatStr);
+
     public String basicGreeting() {
         return "Hello, lovely to see you, How are you!";
     }
 
     public String guestGreeting(String name) {
-        String formatName = String.format("Hi %s, its lovely to see you", name);
-        return formatName;
+        if ( timeOnlyFormatInt < 12) {
+            String formatName = String.format("Good Morning %s, its lovely to see you", name);
+            return formatName;
+        }
+        else if (timeOnlyFormatInt > 12 && timeOnlyFormatInt < 2) {
+            String formatName = String.format("Good Afternoon %s, its lovely to see you", name);
+            return formatName;
+        }
+        else {
+            String formatName = String.format("Good Evening %s, its lovely to see you", name);
+            return formatName;
+        }
     }
 
     public String dateAnnounced() {
-        Date date = new Date();
-        return "Its currently " + date;
+        return "Its currently " + myDate;
+        // return "Its currently " + timeOnlyFormatStr;
     }
 
     public String respondBeforeAlexis(String converstation) {

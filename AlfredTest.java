@@ -9,10 +9,10 @@ public class AlfredTest {
         String oneMoreTest = alfredBot.respondBeforeAlexis("Maybe that's what Batman is about. Not winning. But failing..");
 
         // System.out.println(testGreeting);
-        // System.out.println(testGuestGreeting);
-        // System.out.println(testAnnouncements);
+        System.out.println(testGuestGreeting);
+        System.out.println(testAnnouncements);
         // System.out.println(alexisTest);
-        System.out.println(anotherTest);
+        // System.out.println(anotherTest);
         // System.out.println(oneMoreTest);
     }
 }
